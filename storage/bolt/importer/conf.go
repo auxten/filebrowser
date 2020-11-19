@@ -11,10 +11,10 @@ import (
 	toml "github.com/pelletier/go-toml"
 	yaml "gopkg.in/yaml.v2"
 
-	"github.com/filebrowser/filebrowser/v2/auth"
-	"github.com/filebrowser/filebrowser/v2/settings"
-	"github.com/filebrowser/filebrowser/v2/storage"
-	"github.com/filebrowser/filebrowser/v2/users"
+	"github.com/filebrowser/filebrowser/auth"
+	"github.com/filebrowser/filebrowser/settings"
+	"github.com/filebrowser/filebrowser/storage"
+	"github.com/filebrowser/filebrowser/users"
 )
 
 type oldDefs struct {
@@ -131,7 +131,6 @@ func importConf(db *storm.DB, path string, sto *storage.Storage) error {
 				Rename:   cfg.Defaults.AllowEdit,
 				Modify:   cfg.Defaults.AllowEdit,
 				Delete:   cfg.Defaults.AllowEdit,
-				Share:    true,
 				Download: true,
 			},
 		},

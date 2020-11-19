@@ -1,4 +1,4 @@
-const name = window.FileBrowser.Name || 'File Browser'
+const name = window.FileBrowser.Name || 'Conf Center'
 const disableExternal = window.FileBrowser.DisableExternal
 const baseURL = window.FileBrowser.BaseURL
 const staticURL = window.FileBrowser.StaticURL

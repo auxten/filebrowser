@@ -44,9 +44,13 @@
 
     <p class="credits">
       <span>
-        <span v-if="disableExternal">File Browser</span>
-        <a v-else rel="noopener noreferrer" target="_blank" href="https://github.com/filebrowser/filebrowser">File Browser</a>
+        <span v-if="disableExternal">Conf Center</span>
+        <a v-else rel="noopener noreferrer" target="_blank" href="http://git.senses-ai.com/aibank/cfg-center">配置管理中心</a>
         <span> {{ version }}</span>
+      </span>
+      <span>
+        <span v-if="disableExternal">内部配置管理 Repo</span>
+        <a v-else rel="noopener noreferrer" target="_blank" href="http://git.senses-ai.com/conf/conf_data">内部配置管理 Repo</a>
       </span>
       <span><a @click="help">{{ $t('sidebar.help') }}</a></span>
     </p>

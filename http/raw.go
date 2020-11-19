@@ -10,9 +10,9 @@ import (
 
 	"github.com/mholt/archiver"
 
-	"github.com/filebrowser/filebrowser/v2/files"
-	"github.com/filebrowser/filebrowser/v2/fileutils"
-	"github.com/filebrowser/filebrowser/v2/users"
+	"github.com/filebrowser/filebrowser/files"
+	"github.com/filebrowser/filebrowser/fileutils"
+	"github.com/filebrowser/filebrowser/users"
 )
 
 func slashClean(name string) string {

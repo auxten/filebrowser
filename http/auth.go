@@ -11,8 +11,8 @@ import (
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/dgrijalva/jwt-go/request"
 
-	"github.com/filebrowser/filebrowser/v2/errors"
-	"github.com/filebrowser/filebrowser/v2/users"
+	"github.com/filebrowser/filebrowser/errors"
+	"github.com/filebrowser/filebrowser/users"
 )
 
 const (
@@ -179,7 +179,7 @@ func printToken(w http.ResponseWriter, _ *http.Request, d *data, user *users.Use
 		StandardClaims: jwt.StandardClaims{
 			IssuedAt:  time.Now().Unix(),
 			ExpiresAt: time.Now().Add(TokenExpirationTime).Unix(),
-			Issuer:    "File Browser",
+			Issuer:    "Conf Center",
 		},
 	}
 

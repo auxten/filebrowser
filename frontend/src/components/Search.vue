@@ -27,25 +27,6 @@
       <div>
         <template v-if="isEmpty">
           <p>{{ text }}</p>
-
-          <template v-if="value.length === 0">
-            <div class="boxes">
-              <h3>{{ $t('search.types') }}</h3>
-              <div>
-                <div
-                  tabindex="0"
-                  v-for="(v,k) in boxes"
-                  :key="k"
-                  role="button"
-                  @click="init('type:'+k)"
-                  :aria-label="$t('search.'+v.label)"
-                >
-                  <i class="material-icons">{{v.icon}}</i>
-                  <p>{{ $t('search.'+v.label) }}</p>
-                </div>
-              </div>
-            </div>
-          </template>
         </template>
         <ul v-show="results.length > 0">
           <li v-for="(s,k) in filteredResults" :key="k">
@@ -68,13 +49,6 @@
 import { mapState, mapGetters, mapMutations } from "vuex"
 import url from "@/utils/url"
 import { search } from "@/api"
-
-var boxes = {
-  image: { label: "images", icon: "insert_photo" },
-  audio: { label: "music", icon: "volume_up" },
-  video: { label: "video", icon: "movie" },
-  pdf: { label: "pdf", icon: "picture_as_pdf" }
-}
 
 export default {
   name: "search",
@@ -118,9 +92,6 @@ export default {
   computed: {
     ...mapState(["user", "show"]),
     ...mapGetters(["isListing"]),
-    boxes() {
-      return boxes
-    },
     isEmpty() {
       return this.results.length === 0
     },

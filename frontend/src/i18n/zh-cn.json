@@ -14,7 +14,7 @@
     "more": "更多",
     "move": "移动",
     "moveFile": "移动文件",
-    "new": "新",
+    "new": "新建",
     "next": "下一个",
     "ok": "确定",
     "replace": "替换",
@@ -130,7 +130,7 @@
     "documentation": "帮助文档",
     "branding": "品牌",
     "disableExternalLinks": "禁止外部链接（帮助文档除外）",
-    "brandingHelp": "您可以通过改变实例名称，更换Logo，加入自定义样式，甚至禁用到Github的外部链接来自定义File Browser的外观和给人的感觉。\n想获得更多信息，请查看 {0} 。",
+    "brandingHelp": "您可以通过改变实例名称，更换Logo，加入自定义样式，甚至禁用到Github的外部链接来自定义Conf Center的外观和给人的感觉。\n想获得更多信息，请查看 {0} 。",
     "admin": "管理员",
     "administrator": "管理员",
     "allowCommands": "执行命令（shell 命令）",
@@ -178,7 +178,7 @@
     "userDefaults": "用户默认设置",
     "defaultUserDescription": "这些是新用户的默认设置。",
     "executeOnShell": "在Shell中执行",
-    "executeOnShellDescription": "默认情况下，File Browser通过直接调用命令的二进制包来执行命令，如果想在shell中执行（如Bash、PowerShell），你可以在这里定义所使用的shell和参数。如果设置了这个选项，所执行的命令会作为参数追加在后面。本选项对用户命令和事件钩子都生效。",
+    "executeOnShellDescription": "默认情况下，Conf Center通过直接调用命令的二进制包来执行命令，如果想在shell中执行（如Bash、PowerShell），你可以在这里定义所使用的shell和参数。如果设置了这个选项，所执行的命令会作为参数追加在后面。本选项对用户命令和事件钩子都生效。",
     "perm": {
       "create": "创建文件和文件夹",
       "delete": "删除文件和文件夹",
@@ -212,24 +212,8 @@
     "pressToSearch": "回车搜索..."
   },
   "languages": {
-    "ar": "العربية",
     "en": "English",
-    "is": "Icelandic",
-    "it": "Italiano",
-    "fr": "Français",
-    "pt": "Português",
-    "ptBR": "Português（Brasil）",
-    "ja": "日本語",
-    "zhCN": "中文（简体）",
-    "zhTW": "中文（繁體）",
-    "es": "Español",
-    "de": "Deutsch",
-    "ru": "Русский",
-    "pl": "Polski",
-    "ko": "한국어",
-    "nlBE": "Dutch（Belgium）",
-    "ro": "Romanian",
-    "svSE": "Swedish（Sweden）"
+    "zhCN": "中文（简体）"
   },
   "time": {
     "unit": "时间单位",

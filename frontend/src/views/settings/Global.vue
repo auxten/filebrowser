@@ -22,10 +22,6 @@
 
         <h3>{{ $t('settings.branding') }}</h3>
 
-        <i18n path="settings.brandingHelp" tag="p" class="small">
-          <a class="link" target="_blank" href="https://filebrowser.xyz/configuration/custom-branding">{{ $t('settings.documentation') }}</a>
-        </i18n>
-
         <p>
           <input type="checkbox" v-model="settings.branding.disableExternal" id="branding-links" />
           {{ $t('settings.disableExternalLinks') }}
@@ -78,7 +74,6 @@
         <i18n path="settings.commandRunnerHelp" tag="p" class="small">
           <code>FILE</code>
           <code>SCOPE</code>
-          <a class="link" target="_blank" href="https://filebrowser.xyz/configuration/command-runner">{{ $t('settings.documentation') }}</a>
         </i18n>
 
         <div v-for="command in settings.commands" :key="command.name" class="collapsible">

@@ -5,8 +5,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/filebrowser/filebrowser/v2/settings"
-	"github.com/filebrowser/filebrowser/v2/storage"
+	"github.com/filebrowser/filebrowser/settings"
+	"github.com/filebrowser/filebrowser/storage"
 )
 
 type modifyRequest struct {
@@ -59,9 +59,6 @@ func NewHandler(imgSvc ImgService, fileCache FileCache, store *storage.Storage, 
 		Handler(monkey(previewHandler(imgSvc, fileCache, server.EnableThumbnails, server.ResizePreview), "/api/preview")).Methods("GET")
 	api.PathPrefix("/command").Handler(monkey(commandsHandler, "/api/command")).Methods("GET")
 	api.PathPrefix("/search").Handler(monkey(searchHandler, "/api/search")).Methods("GET")
-
-	public := api.PathPrefix("/public").Subrouter()
-	public.PathPrefix("/dl").Handler(monkey(publicDlHandler, "/api/public/dl/")).Methods("GET")
 
 	return stripPrefix(server.BaseURL, r), nil
 }

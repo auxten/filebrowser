@@ -11,9 +11,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/filebrowser/filebrowser/v2/auth"
-	"github.com/filebrowser/filebrowser/v2/errors"
-	"github.com/filebrowser/filebrowser/v2/settings"
+	"github.com/filebrowser/filebrowser/auth"
+	"github.com/filebrowser/filebrowser/errors"
+	"github.com/filebrowser/filebrowser/settings"
 )
 
 func init() {
@@ -40,7 +40,7 @@ func addConfigFlags(flags *pflag.FlagSet) {
 	flags.String("recaptcha.key", "", "ReCaptcha site key")
 	flags.String("recaptcha.secret", "", "ReCaptcha secret")
 
-	flags.String("branding.name", "", "replace 'File Browser' by this name")
+	flags.String("branding.name", "", "replace 'Conf Center' by this name")
 	flags.String("branding.files", "", "path to directory with images and custom styles")
 	flags.Bool("branding.disableExternal", false, "disable external links such as GitHub links")
 }
@@ -156,7 +156,6 @@ func printSettings(ser *settings.Server, set *settings.Settings, auther auth.Aut
 	fmt.Fprintf(w, "\t\tRename:\t%t\n", set.Defaults.Perm.Rename)
 	fmt.Fprintf(w, "\t\tModify:\t%t\n", set.Defaults.Perm.Modify)
 	fmt.Fprintf(w, "\t\tDelete:\t%t\n", set.Defaults.Perm.Delete)
-	fmt.Fprintf(w, "\t\tShare:\t%t\n", set.Defaults.Perm.Share)
 	fmt.Fprintf(w, "\t\tDownload:\t%t\n", set.Defaults.Perm.Download)
 	w.Flush()
 

@@ -7,9 +7,9 @@ import (
 	"github.com/asdine/storm"
 	bolt "go.etcd.io/bbolt"
 
-	"github.com/filebrowser/filebrowser/v2/rules"
-	"github.com/filebrowser/filebrowser/v2/storage"
-	"github.com/filebrowser/filebrowser/v2/users"
+	"github.com/filebrowser/filebrowser/rules"
+	"github.com/filebrowser/filebrowser/storage"
+	"github.com/filebrowser/filebrowser/users"
 )
 
 type oldUser struct {
@@ -71,7 +71,6 @@ func convertUsersToNew(old []*oldUser) ([]*users.User, error) {
 				Rename:   oldUser.AllowEdit,
 				Modify:   oldUser.AllowEdit,
 				Delete:   oldUser.AllowEdit,
-				Share:    true,
 				Download: true,
 			},
 		}
