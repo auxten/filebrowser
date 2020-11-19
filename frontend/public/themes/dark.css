@@ -119,8 +119,7 @@ nav > div {
 .dashboard p label {
   color: var(--textPrimary);
 }
-.card#share ul li input,
-.card#share ul li select,
+
 .input {
   background: var(--surfaceSecondary);
   color: var(--textPrimary);
@@ -189,13 +188,4 @@ table th {
   #dropdown {
     background: var(--surfaceSecondary) !important;
   }
-}
-
-.share__box {
-  background: var(--surfacePrimary) !important;
-  color: var(--textPrimary);
-}
-
-.share__box__element {
-  border-top-color: var(--divider);
 }

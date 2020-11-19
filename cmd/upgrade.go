@@ -17,9 +17,7 @@ func init() {
 var upgradeCmd = &cobra.Command{
 	Use:   "upgrade",
 	Short: "Upgrades an old configuration",
-	Long: `Upgrades an old configuration. This command DOES NOT
-import share links because they are incompatible with
-this version.`,
+	Long: `Upgrades an old configuration.`,
 	Args: cobra.NoArgs,
 	Run: func(cmd *cobra.Command, args []string) {
 		flags := cmd.Flags()

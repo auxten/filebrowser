@@ -51,10 +51,6 @@ func NewHandler(imgSvc ImgService, fileCache FileCache, store *storage.Storage, 
 	api.PathPrefix("/resources").Handler(monkey(resourcePostPutHandler, "/api/resources")).Methods("PUT")
 	api.PathPrefix("/resources").Handler(monkey(resourcePatchHandler, "/api/resources")).Methods("PATCH")
 
-	api.PathPrefix("/share").Handler(monkey(shareGetsHandler, "/api/share")).Methods("GET")
-	api.PathPrefix("/share").Handler(monkey(sharePostHandler, "/api/share")).Methods("POST")
-	api.PathPrefix("/share").Handler(monkey(shareDeleteHandler, "/api/share")).Methods("DELETE")
-
 	api.Handle("/settings", monkey(settingsGetHandler, "")).Methods("GET")
 	api.Handle("/settings", monkey(settingsPutHandler, "")).Methods("PUT")
 
@@ -66,7 +62,6 @@ func NewHandler(imgSvc ImgService, fileCache FileCache, store *storage.Storage, 
 
 	public := api.PathPrefix("/public").Subrouter()
 	public.PathPrefix("/dl").Handler(monkey(publicDlHandler, "/api/public/dl/")).Methods("GET")
-	public.PathPrefix("/share").Handler(monkey(publicShareHandler, "/api/public/share/")).Methods("GET")
 
 	return stripPrefix(server.BaseURL, r), nil
 }

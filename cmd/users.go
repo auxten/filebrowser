@@ -66,7 +66,6 @@ func addUserFlags(flags *pflag.FlagSet) {
 	flags.Bool("perm.rename", true, "rename perm for users")
 	flags.Bool("perm.modify", true, "modify perm for users")
 	flags.Bool("perm.delete", true, "delete perm for users")
-	flags.Bool("perm.share", true, "share perm for users")
 	flags.Bool("perm.download", true, "download perm for users")
 	flags.String("sorting.by", "name", "sorting mode (name, size or modified)")
 	flags.Bool("sorting.asc", false, "sorting by ascending order")
@@ -107,8 +106,6 @@ func getUserDefaults(flags *pflag.FlagSet, defaults *settings.UserDefaults, all 
 			defaults.Perm.Modify = mustGetBool(flags, flag.Name)
 		case "perm.delete":
 			defaults.Perm.Delete = mustGetBool(flags, flag.Name)
-		case "perm.share":
-			defaults.Perm.Share = mustGetBool(flags, flag.Name)
 		case "perm.download":
 			defaults.Perm.Download = mustGetBool(flags, flag.Name)
 		case "commands":

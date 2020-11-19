@@ -17,7 +17,6 @@ import NewFile from './NewFile'
 import NewDir from './NewDir'
 import Replace from './Replace'
 import ReplaceRename from './ReplaceRename'
-import Share from './Share'
 import Upload from './Upload'
 import { mapState } from 'vuex'
 import buttons from '@/utils/buttons'
@@ -31,7 +30,6 @@ export default {
     Download,
     Move,
     Copy,
-    Share,
     NewFile,
     NewDir,
     Help,
@@ -90,7 +88,6 @@ export default {
         'download',
         'replace',
         'replace-rename',
-        'share',
         'upload'
       ].indexOf(this.show) >= 0;
 
